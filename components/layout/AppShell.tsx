@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { APP_CONFIG } from '@/lib/constants';
 import { ConnectWallet, Wallet } from '@coinbase/onchainkit/wallet';
 import { Name } from '@coinbase/onchainkit/identity';
+import { LoginButton } from '@/components/auth/LoginButton';
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -56,8 +57,9 @@ export function AppShell({ children }: AppShellProps) {
               </div>
             </nav>
 
-            {/* Wallet Connection */}
+            {/* Authentication & Wallet */}
             <div className="flex items-center space-x-4">
+              <LoginButton variant="outline" size="sm" />
               <Wallet>
                 <ConnectWallet>
                   <Name />
