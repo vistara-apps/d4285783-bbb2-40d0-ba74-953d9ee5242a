@@ -1,0 +1,56 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "@next_public_supabase_url",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@next_public_supabase_anon_key",
+    "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_role_key",
+    "NEXT_PUBLIC_PRIVY_APP_ID": "@next_public_privy_app_id",
+    "PRIVY_APP_SECRET": "@privy_app_secret",
+    "NEXT_PUBLIC_BASE_RPC_URL": "https://mainnet.base.org",
+    "NEXT_PUBLIC_BASE_CHAIN_ID": "8453",
+    "NEXT_PUBLIC_USDC_CONTRACT_ADDRESS": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "NEXT_PUBLIC_NEYNAR_API_KEY": "@next_public_neynar_api_key",
+    "NEYNAR_API_SECRET": "@neynar_api_secret",
+    "NEXT_PUBLIC_PINATA_API_KEY": "@next_public_pinata_api_key",
+    "PINATA_SECRET_API_KEY": "@pinata_secret_api_key",
+    "NEXT_PUBLIC_PINATA_JWT": "@next_public_pinata_jwt",
+    "NEXT_PUBLIC_APP_NAME": "EduNiche",
+    "NEXT_PUBLIC_APP_DESCRIPTION": "Your academic co-pilot at the speed of Web3",
+    "UPSTASH_REDIS_REST_URL": "@upstash_redis_rest_url",
+    "UPSTASH_REDIS_REST_TOKEN": "@upstash_redis_rest_token"
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  }
+}
