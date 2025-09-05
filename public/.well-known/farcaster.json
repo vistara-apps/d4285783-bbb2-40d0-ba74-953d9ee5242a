@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "EduNiche",
+    "subtitle": "Built with Zara",
+    "description": "EduNiche is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://d4285783bbb240d0ba74953d9ee5242a-znmq.vercel.app",
+    "splashImageUrl": "https://d4285783bbb240d0ba74953d9ee5242a-znmq.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://d4285783bbb240d0ba74953d9ee5242a-znmq.vercel.app/image.png",
+    "tagline": "EduNiche",
+    "screenshotUrls": [
+      "https://d4285783bbb240d0ba74953d9ee5242a-znmq.vercel.app/screenshot.png",
+      "https://d4285783bbb240d0ba74953d9ee5242a-znmq.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://d4285783bbb240d0ba74953d9ee5242a-znmq.vercel.app/api/webhook"
+  }
+}
